@@ -4,7 +4,7 @@ import Calculator from "./components/Calculator";
 import Tracker from "./components/Tracker";
 
 var API_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbyGnYMK2qsFTk76nnHu6fpVh72NXKv0PXSKr76-iUbBeZ4RHURvhzJiLSKpsmQD8IBcFQ/exec"
+  "https://script.google.com/macros/s/AKfycbzIhLvNVL7L2PjKVEWXPdGZ-KCtDcJY1Cxs65IfKQDUVWPO5jIxhAI_knrHCkkJMCrntg/exec"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
