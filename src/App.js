@@ -4,7 +4,7 @@ import Calculator from "./components/Calculator";
 import Tracker from "./components/Tracker";
 
 var API_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbwTQKcDIahNMJUUL7Wfp7q-sd8Sutk1jmGPumrxq61LcrPvPSlgtKSfTXnJRGUFEMHelA/exec"
+  "https://script.google.com/macros/s/AKfycbyGnYMK2qsFTk76nnHu6fpVh72NXKv0PXSKr76-iUbBeZ4RHURvhzJiLSKpsmQD8IBcFQ/exec"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,7 +61,7 @@ export default function App() {
           align="center"
           component="div"
         >
-          Spring Plant Fair 2024
+          Spring Plant Fair 2025
         </Typography>
         <Tabs
           value={value}
