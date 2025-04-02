@@ -19,6 +19,9 @@ function Calculator({ api }) {
     fiveHalfSixInchQty: "",
     decorativeQty: "",
     fiveGallonQty: "",
+    doctorNelsonTerrarium: "",
+    readyMadeTerrarium: "",  
+    riggins: "",
   };
 
   const initialTotals = {
@@ -35,13 +38,16 @@ function Calculator({ api }) {
   const [isPerennialPowerhouse, setIsPerennialPowerhouse] = useState(false);
 
   const prices = {
-    twoInchQty: 3.0,
-    fourInchQty: 5.0,
+    twoInchQty: 2.0,
+    fourInchQty: 4.0,
     threePackQty: 5.0,
     fourPackQty: 5.0,
-    fiveHalfSixInchQty: 8.0,
-    decorativeQty: 20.0,
+    fiveHalfSixInchQty: 7.0,
+    decorativeQty: 10.0,
     fiveGallonQty: 25.0,
+    doctorNelsonTerrarium: 20.0,  
+    readyMadeTerrarium: 25.0,
+    riggins: 5.0,
   };
 
   const labelsDictionary = {
@@ -52,6 +58,9 @@ function Calculator({ api }) {
     fiveHalfSixInchQty: "5.5 Inch / 6 Inch",
     decorativeQty: "Decorative",
     fiveGallonQty: "Five Gallon",
+    doctorNelsonTerrarium: "Dr. Nelson Terrarium",
+    readyMadeTerrarium: "Premade Terrarium",
+    riggins: "Dr Riggins Spray"
   };
 
   const handleInputChange = (event) => {
@@ -82,7 +91,7 @@ function Calculator({ api }) {
       0
     );
 
-    const discountBlooming = totalItems >= 20 ? 0.05 : 0;
+    const discountBlooming = 0;
     const totalDiscountRate = isPerennialPowerhouse
       ? discountBlooming + 0.05
       : discountBlooming;
@@ -187,10 +196,6 @@ function Calculator({ api }) {
             </Typography>
           }
         />
-        <Typography sx={{ marginBottom: "15px" }}>
-          <span style={{ fontWeight: "bold" }}>Blooming Bundle (5%):</span>{" "}
-          (Will be applied automatically)
-        </Typography>
       </Grid>
 
       <Grid container spacing={2}>
