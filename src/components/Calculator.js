@@ -98,9 +98,11 @@ function Calculator({ api }) {
       return acc + prices[key] * quantity;
     }, 0);
     console.log("perrenials qtty" + quantities.perennials + "parsed: " + parseFloat(quantities.perennials))
+    let shouldDiscount = false
     if(quantities.perennials != "" && parseFloat(quantities.perennials) >= 3.0){
       console.log("set discount!")
       setIsPerennialPowerhouse(true)
+      shouldDiscount = true
     }
 
     const totalItems = Object.values(quantities).reduce(
@@ -109,7 +111,7 @@ function Calculator({ api }) {
     );
 
     const discountBlooming = 0;
-    const totalDiscountRate = isPerennialPowerhouse
+    const totalDiscountRate = shouldDiscount 
       ? discountBlooming + 0.05
       : discountBlooming;
     const totalDiscount = subtotal * totalDiscountRate;
