@@ -22,6 +22,10 @@ function Calculator({ api }) {
     doctorNelsonTerrarium: "",
     readyMadeTerrarium: "",  
     riggins: "",
+    sunflowers: "",
+    strawberries:"",
+    perennials: "",
+    banana: "",
   };
 
   const initialTotals = {
@@ -41,13 +45,17 @@ function Calculator({ api }) {
     twoInchQty: 2.0,
     fourInchQty: 4.0,
     threePackQty: 5.0,
-    fourPackQty: 5.0,
-    fiveHalfSixInchQty: 7.0,
+    fourPackQty: 6.0,
+    fiveHalfSixInchQty: 6.0,
     decorativeQty: 10.0,
     fiveGallonQty: 25.0,
     doctorNelsonTerrarium: 20.0,  
     readyMadeTerrarium: 25.0,
     riggins: 5.0,
+    sunflowers: 8.0,
+    strawberries:8.0,
+    perennials: 8.0,
+    banana: 30.0,
   };
 
   const labelsDictionary = {
@@ -60,7 +68,11 @@ function Calculator({ api }) {
     fiveGallonQty: "Five Gallon",
     doctorNelsonTerrarium: "Dr. Nelson Terrarium",
     readyMadeTerrarium: "Premade Terrarium",
-    riggins: "Dr Riggins Spray"
+    riggins: "Dr Riggins Spray",
+    sunflowers: "Sunflowers",
+    strawberries:"Strawberries",
+    perennials: "Perennials",
+    banana: "Banana plant",
   };
 
   const handleInputChange = (event) => {
@@ -85,6 +97,9 @@ function Calculator({ api }) {
       const quantity = quantityStr === "" ? 0 : parseFloat(quantityStr);
       return acc + prices[key] * quantity;
     }, 0);
+    if(quantities['perennials'] != "" && parseFloat(quantities['perennials']) >= 3.0){
+      isPerennialPowerhouse = true
+    }
 
     const totalItems = Object.values(quantities).reduce(
       (acc, quantity) => acc + (parseFloat(quantity) || 0),
@@ -181,21 +196,7 @@ function Calculator({ api }) {
         ))}
       </Grid>
       <Grid item xs={12}>
-        <FormControlLabel
-          sx={{ marginLeft: 0 }}
-          labelPlacement="start"
-          control={
-            <Checkbox
-              checked={isPerennialPowerhouse}
-              onChange={togglePerennialPowerhouse}
-            />
-          }
-          label={
-            <Typography component="span" sx={{ fontWeight: "bold" }}>
-              Perennial Powerhouse (5%):
-            </Typography>
-          }
-        />
+
       </Grid>
 
       <Grid container spacing={2}>
