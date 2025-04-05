@@ -44,8 +44,8 @@ function Calculator({ api }) {
   const prices = {
     twoInchQty: 2.0,
     fourInchQty: 4.0,
-    threePackQty: 5.0,
-    fourPackQty: 6.0,
+    threePackQty: 4.0,
+    fourPackQty: 5.0,
     fiveHalfSixInchQty: 6.0,
     decorativeQty: 10.0,
     fiveGallonQty: 25.0,
@@ -54,7 +54,7 @@ function Calculator({ api }) {
     riggins: 5.0,
     sunflowers: 8.0,
     strawberries:8.0,
-    perennials: 8.0,
+    perennials: 12.0,
     banana: 30.0,
   };
 
