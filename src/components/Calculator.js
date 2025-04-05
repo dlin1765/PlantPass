@@ -98,7 +98,7 @@ function Calculator({ api }) {
       return acc + prices[key] * quantity;
     }, 0);
     if(quantities.perennials != "" && parseFloat(quantities.perennials) >= 3.0){
-      isPerennialPowerhouse = true
+      setIsPerennialPowerhouse(true)
     }
 
     const totalItems = Object.values(quantities).reduce(
