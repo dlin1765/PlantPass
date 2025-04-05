@@ -97,7 +97,7 @@ function Calculator({ api }) {
       const quantity = quantityStr === "" ? 0 : parseFloat(quantityStr);
       return acc + prices[key] * quantity;
     }, 0);
-    if(quantities['perennials'] != "" && parseFloat(quantities['perennials']) >= 3.0){
+    if(quantities.perennials != "" && parseFloat(quantities.perennials) >= 3.0){
       isPerennialPowerhouse = true
     }
 
